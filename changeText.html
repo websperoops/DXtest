@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<style>
+
+    body h2  {
+        color:blue;
+    }
+</style>
+<body>
+
+<h2>JavaScript HTML DOM</h2>
+
+<div id="main">
+<p>Finding HTML Elements by Tag Name</p>
+<p>This example demonstrates the <b>getElementsByTagName</b> method.</p>
+</div>
+<button id="button_1">Button 1</button>
+<button id="button_2">Button 2</button>
+<p id="demo"></p>
+
+<script>
+const x = document.getElementById("main");
+const y = x.getElementsByTagName("p");
+
+// setup  
+document.getElementById('button_1').onclick = function changeContent() {
+        const x = document.getElementById("main");
+        const y = x.getElementsByTagName("p");
+        document.getElementById("demo").innerHTML = y[0].innerHTML;
+}
+// setup  
+document.getElementById('button_2').onclick = function changeContent() {
+        const x = document.getElementById("main");
+        const y = x.getElementsByTagName("p");
+        document.getElementById("demo").innerHTML = y[1].innerHTML;
+}
+
+</script>
+
+</body>
+</html>
